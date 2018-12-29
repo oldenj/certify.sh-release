@@ -17,14 +17,14 @@ package()
 {
   cd ${srcdir}/${pkgname}.sh-${pkgver}
   install -dm755 "${pkgdir}/usr/bin"
-  install -dm755 "${pkgdir}/etc/certify/letsencrypt"
+  install -dm755 "${pkgdir}/var/lib/$pkgname"
   install -dm755 "${pkgdir}/usr/share/licenses/$pkgname"
 
 
   install -Dm755 "${pkgname}.sh" \
     "${pkgdir}/usr/bin/${pkgname}"
   install -Dm755 "config/openssl.cnf" \
-    "${pkgdir}/etc/certify/letsencrypt/openssl.cnf"
+    "${pkgdir}/var/lib/${pkgname}/openssl.cnf"
   install -Dm755 "LICENSE" \
-    "${pkgdir}/usr/share/licenses/$pkgname/LICENSE"
+    "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
 }
