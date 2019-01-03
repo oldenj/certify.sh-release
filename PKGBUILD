@@ -9,7 +9,7 @@ pkgdesc="Simple, easy-to-use helper script for Letsencrypt certification"
 url="https://github.com/oldenj/${pkgname}.sh"
 arch=("any")
 license=("GPL3")
-depends=("curl")
+depends=()
 source=("${url}/archive/v${pkgver}.tar.gz")
 md5sums=('c8422da2202710a72526b13120ca7520')
 
